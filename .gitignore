@@ -1,5 +1,5 @@
 # Visual Studio files
-.vs/
+.vs/NetFramework30ASPNETWEB
 *.suo
 *.user
 *.userosscache
