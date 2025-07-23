@@ -30,6 +30,7 @@
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Selected="True"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="~/Secure.aspx" Text="Secure Page"/>
                     </Items>
                 </asp:Menu>
             </div>

@@ -1,10 +1,10 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="NetFramework30ASPNETWEB.About" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AccessDenied.aspx.cs" Inherits="NetFramework30ASPNETWEB.AccessDenied" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>About - My ASP.NET Application</title>
+    <title>Access Denied - My ASP.NET Application</title>
     <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -29,7 +29,7 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" Selected="True"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                         <asp:MenuItem NavigateUrl="~/Secure.aspx" Text="Secure Page"/>
                     </Items>
                 </asp:Menu>
@@ -37,19 +37,16 @@
         </div>
         <div class="main">
             <div class="content">
-                <h2>About</h2>
+                <h2 class="error">Access Denied</h2>
                 <p>
-                    This is a simple ASP.NET Framework 3.0 application.
+                    You do not have permission to access the requested page.
                 </p>
                 <p>
-                    This application was created as a demonstration of a basic ASP.NET website structure.
+                    If you believe you should have access to this resource, please contact your system administrator.
                 </p>
-                <h3>Technologies Used</h3>
-                <ul>
-                    <li>ASP.NET Framework 3.0</li>
-                    <li>C# programming language</li>
-                    <li>HTML and CSS for layout and styling</li>
-                </ul>
+                <p>
+                    <asp:Button ID="HomeButton" runat="server" Text="Return to Home Page" OnClick="HomeButton_Click" />
+                </p>
             </div>
         </div>
         <div class="footer">

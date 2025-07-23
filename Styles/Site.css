@@ -148,3 +148,16 @@ input, textarea, select {
 .bold {
     font-weight: bold;
 }
+
+/* Secure page specific styles */
+.userInfo {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+}
+
+.error {
+    color: #c00;
+    font-weight: bold;
+}
