@@ -14,7 +14,8 @@ namespace NetFramework30ASPNETWEB
         // You can move these to web.config for easier management
         private static readonly string[] AuthorizedGroups = new string[] {
             @"BUILTIN\Administrators",
-            @"DOMAIN\SecureAppUsers"  // Replace DOMAIN with your actual domain name
+            @"DOMAIN\SecureAppUsers",
+            @"NT AUTHORITY\Authenticated Users"  // Just to sample some access, in a real scenario we have a defined group
         };
 
         protected void Page_Load(object sender, EventArgs e)

@@ -11,7 +11,22 @@ namespace NetFramework30ASPNETWEB
         protected void Page_Load(object sender, EventArgs e)
         {
             // Set the current date and time on each page load
-            DateTimeLabel.Text = "Current server time: " + DateTime.Now.ToString("f");
+            string authInfo = "";
+            
+            // Add authentication details
+            if (User != null && User.Identity != null)
+            {
+                authInfo = String.Format("User: {0} | Authenticated: {1} | Auth Type: {2}", 
+                    User.Identity.Name, 
+                    User.Identity.IsAuthenticated, 
+                    User.Identity.AuthenticationType);
+            }
+            else
+            {
+                authInfo = "User identity not available";
+            }
+            
+            DateTimeLabel.Text = "Current server time: " + DateTime.Now.ToString("f") + " | " + authInfo;
         }
     }
 }
